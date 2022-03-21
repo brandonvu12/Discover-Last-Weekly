@@ -34,3 +34,6 @@ Provide a copy of last week's Discover Weekly so you never forget!
     ```
     python3 discover_last_weekly.py
     ```
+    
+## TODO
+1. Automate script weekly on Sundays (before Discover Weekly updates for the week).
