@@ -1,6 +1,8 @@
 # Discover-Last-Weekly
 Provide a copy of last week's Spotify Discover Weekly so you never forget!
 
+Currently running with `crontabs` on my macOS system to automate script weekly on Sundays.
+
 ## Setting up to project
 
 1. Clone the repository to your local machine.
