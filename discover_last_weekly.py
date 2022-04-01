@@ -1,13 +1,18 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from spotipy.oauth2 import SpotifyClientCredentials
+from dotenv import load_dotenv
+import os
 
-SPOTIPY_CLIENT_ID='spotify-client-id'
 
-SPOTIPY_CLIENT_SECRET='spotify-client-secret'
+load_dotenv("")
 
-# make the same redirect uri in Spotify dashboard.
-SPOTIFY_REDIRECT_URI = 'spotify-redirect-uri'
+SPOTIPY_CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID")
+
+SPOTIPY_CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET")
+
+SPOTIFY_REDIRECT_URI = os.getenv("SPOTIFY_REDIRECT_URI")
+
 
 scopes = 'playlist-read-private,playlist-modify-public'
 
