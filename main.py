@@ -1,18 +1,15 @@
-from flask import Flask, render_template
-from discover_last_weekly import main
-
+from flask import Flask,render_template
+import discover_last_weekly
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
-def index():
-    # if request.method == "POST":
-    #     DLW()
-    return render_template("index.html")
+#rendering the HTML page which has the button
+@app.route('/')
+def main():
+    return render_template('index.html')
 
-@app.route("/sheesh",methods=["GET", "POST"])
-def DLW_through():
-    main()
-    return render_template("sheesh.html")
-
-
+#background process happening
+@app.route('/sheesh', methods=['GET','POST'])
+def run_DLW():
+    discover_last_weekly.main()
+    return render_template('sheesh.html')
